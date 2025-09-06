@@ -2,7 +2,6 @@
 
 ![Unity](https://img.shields.io/badge/Engine-Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
 ![C#](https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange?style=for-the-badge)
 
 > A **fast-paced 3D action game** with melee & ranged combat, intelligent enemy AI, and immersive gameplay systems — built from scratch in **Unity**.
