@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     private PlayerInput playerInput;
     private float verticalVelocity;
     private Animator animator;
-    private float gravity = -9.8f;
+    private float gravity = -20f;
 
     private void Awake()
     {
@@ -30,6 +30,9 @@ public class Character : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(movementVelocity);
         }
+
+
+        animator.SetBool("AirBorne", !characterController.isGrounded);
     }
 
     private void FixedUpdate()
