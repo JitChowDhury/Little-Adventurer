@@ -7,20 +7,24 @@ public class Character : MonoBehaviour
     private Vector3 movementVelocity;
     private PlayerInput playerInput;
     private float verticalVelocity;
+    private Animator animator;
     private float gravity = -9.8f;
 
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
+        animator = GetComponent<Animator>();
     }
 
     private void CalculatePlayerMovement()
     {
         movementVelocity.Set(playerInput.horizontalInput, 0f, playerInput.verticalInput);
         movementVelocity.Normalize();
-
         movementVelocity = Quaternion.Euler(9, -45f, 0) * movementVelocity;
+
+        animator.SetFloat("Speed", movementVelocity.magnitude);
+
         movementVelocity *= moveSpeed * Time.deltaTime;
         if (movementVelocity != Vector3.zero)
         {
